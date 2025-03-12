@@ -7,6 +7,6 @@ resource "huaweicloud_vpc" "example" {
 
 
 resource "huaweicloud_vpc" "example2" {
-  name = "my_vpc"
+  name = "my_vpc2"
   cidr = "192.168.99.0/24"
 }
