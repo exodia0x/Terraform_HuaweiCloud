@@ -8,8 +8,8 @@ terraform {
 }
 
 provider "huaweicloud" {
-  region = "ap-southeast-3"
-  project_name = "ap-southeast-3_peace_learning"
-  access_key = "SVAQQ28G8ISUVKGQ80KW"
-  secret_key = "dU9R7pIgM0UyiFjKjaby4z0ZAl5t0WaEaKlwbEph"
+  region       = "ap-southeast-3"
+  project_name = var.project_name
+  access_key   = "SVAQQ28G8ISUVKGQ80KW"
+  secret_key   = "dU9R7pIgM0UyiFjKjaby4z0ZAl5t0WaEaKlwbEph"
 }
