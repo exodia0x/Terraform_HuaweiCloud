@@ -12,15 +12,13 @@ resource "huaweicloud_vpc_network_acl" "subnet-01" {
   #   destination_ip_address = "0.0.0.0/0"
   # }
 
-  # egress_rules {
-  #   action                 = "allow"
-  #   ip_version             = 4
-  #   protocol               = "all"
-  #   source_ip_address      = "0.0.0.0/0"
-  #   source_port            = "all"
-  #   destination_ip_address = "0.0.0.0/0"
-  #   destination_port       = "all"
-  # }
+  egress_rules {
+    action                 = "allow"
+    ip_version             = 4
+    protocol               = "any"
+    source_ip_address      = "0.0.0.0/0"
+    destination_ip_address = "0.0.0.0/0"
+  }
 
   associated_subnets {
     subnet_id = huaweicloud_vpc_subnet.subnet001.id
