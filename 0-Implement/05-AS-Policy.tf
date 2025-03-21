@@ -9,7 +9,7 @@ resource "huaweicloud_as_policy" "my_aspolicy_periodic" {
     instance_number = 1
   }
   scheduled_policy {
-    launch_time     = "16:15"
+    launch_time     = "09:15"
     recurrence_type = "Daily"
     # start_time      = "2022-11-30T12:00Z"
     end_time        = "2025-03-30T12:00Z"
