@@ -13,15 +13,15 @@ data "huaweicloud_images_image" "myimage" {
 }
 
 
-# resource "huaweicloud_compute_instance" "basic" {
-#   name      = "basic-001"
-#   image_id  = data.huaweicloud_images_image.myimage.id
-#   flavor_id = data.huaweicloud_compute_flavors.myflavor.ids[0]
-#   #   security_group_ids = [var.secgroup_id]
-#   availability_zone = data.huaweicloud_availability_zones.myaz.names[0]
-#   admin_pass        = "Nanami@201"
+resource "huaweicloud_compute_instance" "basic" {
+  name      = "basic-001"
+  image_id  = data.huaweicloud_images_image.myimage.id
+  flavor_id = data.huaweicloud_compute_flavors.myflavor.ids[0]
+  #   security_group_ids = [var.secgroup_id]
+  availability_zone = data.huaweicloud_availability_zones.myaz.names[0]
+  admin_pass        = "Nanami@201"
 
-#   network {
-#     uuid = huaweicloud_vpc_subnet.subnet001.id
-#   }
-# }
+  network {
+    uuid = huaweicloud_vpc_subnet.subnet001.id
+  }
+}
