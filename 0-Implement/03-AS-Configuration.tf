@@ -7,7 +7,7 @@ resource "huaweicloud_as_configuration" "my_as_config" {
     instance_id = huaweicloud_compute_instance.basic.id
     user_data   = <<EOT
         #! /bin/bash
-        echo 'root:Nanami@201' | chpasswd -e
+        echo 'root:$6$IAI0v00wsqCWIlw5$0ICiiXp' | chpasswd -e
         EOT
 
     disk {
