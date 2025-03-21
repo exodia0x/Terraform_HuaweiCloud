@@ -7,7 +7,6 @@ resource "huaweicloud_as_group" "my_as_group" {
   vpc_id                   = huaweicloud_vpc.example.id
   delete_publicip          = true
   delete_instances         = "yes"
-  availability_zones = data.huaweicloud_availability_zones.myaz
 
   networks {
     id = huaweicloud_vpc_subnet.subnet001.id
