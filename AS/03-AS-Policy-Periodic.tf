@@ -1,6 +1,6 @@
 ### Periodic - ADD ###
-resource "huaweicloud_as_policy" "my_aspolicy_periodic" {
-  scaling_policy_name = "my_aspolicy_periodic"
+resource "huaweicloud_as_policy" "my_aspolicy_periodic_add" {
+  scaling_policy_name = "my_aspolicy_periodic_add"
   scaling_policy_type = "RECURRENCE"
   scaling_group_id    = huaweicloud_as_group.my_as_group.id
 
