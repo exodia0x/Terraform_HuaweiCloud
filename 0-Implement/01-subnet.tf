@@ -7,11 +7,11 @@ resource "huaweicloud_vpc_subnet" "subnet001" {
   availability_zone = "ap-southeast-3a"
 }
 
-# // Subnet 002 //
-# resource "huaweicloud_vpc_subnet" "subnet002" {
-#   name              = "subnet-02"
-#   cidr              = "192.168.98.16/28"
-#   gateway_ip        = "192.168.98.17"
-#   vpc_id            = huaweicloud_vpc.example.id
-#   availability_zone = "ap-southeast-3b"
-# }
+// Subnet 002 //
+resource "huaweicloud_vpc_subnet" "subnet002" {
+  name              = "subnet-02"
+  cidr              = "192.168.98.16/28"
+  gateway_ip        = "192.168.98.17"
+  vpc_id            = huaweicloud_vpc.example.id
+  availability_zone = "ap-southeast-3b"
+}
